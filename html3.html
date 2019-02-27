@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <title>Travel Destination - Guam</title>
+    </head>
+    <body>
+        <style>
+        </style>
+
+        <div id=header>Activities in Guam</div>
+
+        <h4 style="font-family: impact; color: white;">Navigation Bar:</h4>
+
+        <div class="navigation">
+            <a href="Home.html">Home</a>
+            <a href="html1.html">Places</a>
+            <a href="html2.html">Activities</a>
+            <a href="html3.html">Contact</a>
+        </div>
+
+        <!-- footer -->  
+        <div class="footer">
+            <h1 style="color: white; text-shadow: 2px 2px 4px red ;font-family: impact">Contact information:</h1>
+            <p style="color: white; text-shadow: 2px 2px 4px red ;font-family: cursive">For more information, please email me at: charlesl22116416@yandex.com,</p>
+            <p style="color: white; text-shadow: 2px 2px 4px red ;font-family: cursive">or you can shoot me a quick messege below :)</p>
+            <form action="https://postmail.invotes.com/send"
+                  method="post" id="email_form">
+
+                <input type="text" name="subject" placeholder="Subject" />
+                <textarea name="text" placeholder="Message"></textarea>
+                <input type="hidden" name="access_token" value="9hlafc2elx91hgrskkqymfls" />
+                <!-- return urls can be fully qualified -OR-
+start with / for root relative -OR-
+start with . for url relative --> 
+                <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
+                <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
+
+
+                <input id="submit_form" type="submit" value="Send" />
+                <!-- not required, but we'd appreciate it if you'd link to us somewhere on your site -->
+                <p>Powered by <a href="https://postmail.invotes.com" target="_blank">PostMail</a></p>
+            </form>
+
+            <!-- optional, prevents the submit button from being pressed more than once -->
+            <script>
+                var submitButton = document.getElementById("submit_form");
+                var form = document.getElementById("email_form");
+                form.addEventListener("submit", function (e) {
+                    setTimeout(function() {
+                        submitButton.value = "Sending...";
+                        submitButton.disabled = true;
+                    }, 1);
+                });
+            </script> 
+        </div>
+    </body>
+</html>
